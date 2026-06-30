@@ -69,6 +69,7 @@ Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kam
 | NFR-003 | Sistem harus menjaga pemisahan hak akses berdasarkan peran: pelapor, administrator, teknisi, dan Manajer Fasilitas. | STK-001 sampai STK-005 |
 | NFR-004 | Sistem harus menyimpan jejak informasi penting pada laporan, termasuk status, progress, teknisi yang ditugaskan, komentar, konfirmasi, alasan penolakan, alasan perubahan, alasan pembatalan, alasan penolakan hasil pekerjaan, persetujuan penggantian teknisi, dan catatan alasan pembaruan progress administrator. | Data yang ditemukan, Klarifikasi pengguna 30 Juni 2026 |
 | NFR-005 | Sistem tidak mencakup pembayaran, biaya perbaikan, pengadaan barang, integrasi sistem akademik, integrasi notifikasi eksternal, penilaian kinerja teknisi, atau dashboard analitik tingkat lanjut pada scope awal. | Di Luar Scope Awal |
+| NFR-006 | Sistem harus dapat digunakan melalui browser modern pada perangkat desktop dan ponsel dengan tampilan yang responsif. | Referensi tugas proyek Software Engineering |
 
 ## User Story
 
@@ -255,6 +256,7 @@ Bagian yang sebelumnya belum dispesifikasikan pada `03-requirement-specification
 | REQ-DRAFT-021 sampai REQ-DRAFT-024, REQ-DRAFT-032, REQ-DRAFT-033 | FR-024 sampai FR-029, US-012, US-013 |
 | REQ-DRAFT-026 | FR-030, US-014 |
 | Klarifikasi pengguna 30 Juni 2026 | FR-031 sampai FR-043, US-015 sampai US-020 |
+| Referensi tugas proyek Software Engineering | NFR-006 |
 
 ## ASUMSI
 1. ASUMSI: Mahasiswa dan dosen memiliki hak pelaporan yang sama pada tahap awal.

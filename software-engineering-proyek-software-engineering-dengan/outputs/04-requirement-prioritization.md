@@ -19,7 +19,7 @@ ASUMSI: Konflik kebutuhan dianalisis dari requirement formal, aturan bisnis, dan
 | Prioritas | Jumlah Requirement Formal | Makna |
 | --- | ---: | --- |
 | Must | 30 | Wajib ada agar alur inti pelaporan, pemeriksaan, penugasan, progress, konfirmasi, penutupan, dan validasi perubahan laporan dapat berjalan. |
-| Should | 16 | Penting untuk operasional yang lebih lengkap, tetapi tidak menghentikan alur inti bila ditunda. |
+| Should | 17 | Penting untuk operasional yang lebih lengkap, tetapi tidak menghentikan alur inti bila ditunda. |
 | Could | 2 | Bermanfaat untuk pelaporan dan pengelolaan, tetapi dapat menjadi peningkatan setelah versi awal. |
 | Won't | 0 | Tidak ada requirement formal yang dikeluarkan dari scope pada tahap ini. |
 
@@ -80,6 +80,7 @@ ASUMSI: Konflik kebutuhan dianalisis dari requirement formal, aturan bisnis, dan
 | NFR-003 | Must | Pemisahan hak akses mencegah peran melakukan aksi yang tidak sesuai. |
 | NFR-004 | Must | Jejak informasi penting diperlukan untuk audit proses laporan. |
 | NFR-005 | Could | Batasan di luar scope perlu dicatat, tetapi bukan fitur yang harus dibangun. |
+| NFR-006 | Should | Tampilan responsif penting agar pelapor, teknisi, administrator, dan Manajer Fasilitas dapat memakai sistem dari desktop maupun ponsel. |
 
 ## Prioritas User Story
 
@@ -176,6 +177,7 @@ Keputusan berikut diberikan pengguna pada 30 Juni 2026:
 3. `FR-026` dan `FR-027` dapat ditunda sebagian karena chart dan filter dashboard tidak menghentikan laporan dasar dashboard.
 4. `FR-043` dinaikkan dari `Could` menjadi `Should` karena catatan tindak lanjut Manajer Fasilitas penting untuk operasional lebih lanjut.
 5. Opsi penyelesaian konflik `CON-001` sampai `CON-009` disetujui.
+6. `NFR-006` ditambahkan untuk memenuhi ketentuan minimum NFR dan memastikan sistem nyaman digunakan di browser desktop maupun ponsel.
 
 ## Quality Check
 - Semua `FR` memiliki prioritas.
