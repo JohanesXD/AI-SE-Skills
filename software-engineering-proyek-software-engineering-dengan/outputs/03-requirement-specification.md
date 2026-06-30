@@ -7,9 +7,10 @@ Campus Service Request and Maintenance System
 - `outputs/01-inception-stakeholder.md`
 - `outputs/02-elicitation-findings.md`
 - `outputs/02-elicitation-questions.md`
+- Klarifikasi pengguna pada 30 Juni 2026 untuk requirement yang sebelumnya belum dispesifikasikan
 
 ## Ringkasan Sistem
-Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kampus. Administrator memeriksa laporan, menolak laporan tidak valid, menugaskan teknisi, memperbarui progress teknisi, dan menutup laporan. Teknisi menangani laporan yang diberikan, memperbarui progress, dan menyelesaikan pekerjaan. Pelapor dapat melihat progress, memberi komentar, menerima notifikasi aplikasi, dan memberi konfirmasi. Manajer Fasilitas dapat melihat dashboard, laporan ringkas, dan memperbarui daftar ruangan.
+Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kampus. Administrator memeriksa laporan, menolak laporan tidak valid, menugaskan teknisi, memperbarui progress teknisi, dan menutup laporan. Teknisi menangani laporan yang diberikan, memperbarui progress, dan menyelesaikan pekerjaan. Pelapor dapat melihat progress, memberi komentar, mengubah atau membatalkan laporan dengan alasan, menerima notifikasi aplikasi, memberi konfirmasi, dan menolak hasil pekerjaan dengan alasan jika masalah belum selesai. Manajer Fasilitas dapat melihat dashboard, laporan ringkas, mengunduh laporan ringkas, memberi catatan tindak lanjut, dan memperbarui daftar ruangan.
 
 ## Functional Requirement
 
@@ -45,6 +46,19 @@ Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kam
 | FR-028 | Sistem harus menyediakan laporan ringkas untuk Manajer Fasilitas. | REQ-DRAFT-024 |
 | FR-029 | Laporan ringkas harus mengandung ruangan masalah dan kategori masalah. | REQ-DRAFT-033 |
 | FR-030 | Sistem harus mengizinkan Manajer Fasilitas memperbarui daftar ruangan jika ada ruangan baru. | REQ-DRAFT-026 |
+| FR-031 | Sistem harus mengizinkan pelapor mengubah laporan setelah dikirim dengan menyertakan alasan perubahan. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-032 | Sistem harus menampilkan perubahan laporan dan alasan perubahan kepada administrator untuk menentukan apakah laporan tetap valid atau tidak valid. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-033 | Sistem harus mengizinkan administrator menutup laporan yang menjadi tidak valid setelah perubahan pelapor. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-034 | Sistem harus mengizinkan pelapor membatalkan laporan dengan menyertakan alasan pembatalan. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-035 | Sistem harus mengelompokkan daftar ruangan berdasarkan gedung dan lantai. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-036 | Sistem harus mengizinkan pelapor menolak hasil pekerjaan dengan menyertakan alasan, lalu laporan dapat dibuka ulang sesuai ketentuan administrator. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-037 | Sistem harus menyediakan riwayat notifikasi dan status notifikasi sudah dibaca. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-038 | Sistem harus mengizinkan administrator mengedit kategori, lokasi, atau deskripsi laporan sebelum menugaskan teknisi dengan menyertakan alasan. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-039 | Sistem harus mengizinkan administrator menggabungkan laporan duplikat. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-040 | Sistem harus mengizinkan administrator mengganti teknisi setelah laporan berjalan dengan persetujuan teknisi. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-041 | Sistem harus mengizinkan teknisi mengunggah foto hasil pekerjaan atau memperkirakan waktu penyelesaian dengan menyertakan penjelasan. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-042 | Sistem harus mengizinkan laporan ringkas diunduh. | Klarifikasi pengguna 30 Juni 2026 |
+| FR-043 | Sistem harus mengizinkan Manajer Fasilitas memberi catatan tindak lanjut dengan menyertakan alasan. | Klarifikasi pengguna 30 Juni 2026 |
 
 ## Non-Functional Requirement
 
@@ -53,7 +67,7 @@ Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kam
 | NFR-001 | Sistem harus membatasi akses pembuatan dan pemantauan laporan kepada pelapor yang login menggunakan akun kampus. | REQ-DRAFT-001 |
 | NFR-002 | Sistem harus menyediakan notifikasi di dalam aplikasi, bukan melalui email, WhatsApp, atau kanal eksternal pada scope awal. | REQ-DRAFT-019, ASUMSI dari elicitation |
 | NFR-003 | Sistem harus menjaga pemisahan hak akses berdasarkan peran: pelapor, administrator, teknisi, dan Manajer Fasilitas. | STK-001 sampai STK-005 |
-| NFR-004 | Sistem harus menyimpan jejak informasi penting pada laporan, termasuk status, progress, teknisi yang ditugaskan, komentar, konfirmasi, alasan penolakan, dan catatan alasan pembaruan progress administrator. | Data yang ditemukan |
+| NFR-004 | Sistem harus menyimpan jejak informasi penting pada laporan, termasuk status, progress, teknisi yang ditugaskan, komentar, konfirmasi, alasan penolakan, alasan perubahan, alasan pembatalan, alasan penolakan hasil pekerjaan, persetujuan penggantian teknisi, dan catatan alasan pembaruan progress administrator. | Data yang ditemukan, Klarifikasi pengguna 30 Juni 2026 |
 | NFR-005 | Sistem tidak mencakup pembayaran, biaya perbaikan, pengadaan barang, integrasi sistem akademik, integrasi notifikasi eksternal, penilaian kinerja teknisi, atau dashboard analitik tingkat lanjut pada scope awal. | Di Luar Scope Awal |
 
 ## User Story
@@ -74,6 +88,12 @@ Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kam
 | US-012 | Sebagai Manajer Fasilitas, saya ingin melihat dashboard agar saya dapat memantau total masalah selesai dan kategori masalah yang sering muncul. | FR-024, FR-025, FR-026, FR-027 |
 | US-013 | Sebagai Manajer Fasilitas, saya ingin melihat laporan ringkas agar saya dapat mengetahui ruangan dan kategori masalah. | FR-028, FR-029 |
 | US-014 | Sebagai Manajer Fasilitas, saya ingin memperbarui daftar ruangan agar pilihan lokasi laporan tetap sesuai kondisi kampus. | FR-030 |
+| US-015 | Sebagai pelapor, saya ingin mengubah atau membatalkan laporan dengan alasan agar laporan yang saya kirim tetap sesuai kondisi sebenarnya. | FR-031, FR-032, FR-033, FR-034 |
+| US-016 | Sebagai pelapor, saya ingin menolak hasil pekerjaan dengan alasan agar laporan dapat dibuka ulang jika masalah belum selesai. | FR-036 |
+| US-017 | Sebagai administrator, saya ingin memperbaiki data laporan, menggabungkan laporan duplikat, dan mengganti teknisi sesuai aturan agar pengelolaan laporan tetap akurat. | FR-038, FR-039, FR-040 |
+| US-018 | Sebagai teknisi, saya ingin menambahkan foto hasil pekerjaan atau estimasi waktu dengan penjelasan agar progress pekerjaan lebih jelas. | FR-041 |
+| US-019 | Sebagai pengguna sistem, saya ingin melihat riwayat notifikasi dan status sudah dibaca agar saya dapat melacak informasi yang sudah diterima. | FR-037 |
+| US-020 | Sebagai Manajer Fasilitas, saya ingin mengunduh laporan ringkas dan memberi catatan tindak lanjut agar hasil pemantauan dapat digunakan untuk tindakan berikutnya. | FR-042, FR-043 |
 
 ## Acceptance Criteria
 
@@ -157,20 +177,69 @@ Sistem digunakan oleh mahasiswa dan dosen untuk melaporkan masalah fasilitas kam
 1. Manajer Fasilitas dapat menambahkan ruangan baru ke daftar ruangan.
 2. Ruangan baru yang ditambahkan tersedia sebagai pilihan lokasi laporan.
 
-## Requirement yang Masih Belum Dispesifikasikan
-Bagian berikut berasal dari `02-elicitation-questions.md` dan belum dijadikan requirement formal karena belum ada jawaban final:
+### FR-031, FR-032, FR-033 Perubahan Laporan oleh Pelapor
+1. Pelapor dapat mengubah laporan setelah laporan dikirim.
+2. Sistem meminta alasan perubahan saat pelapor mengubah laporan.
+3. Administrator dapat melihat perubahan laporan dan alasan perubahan.
+4. Administrator dapat menentukan apakah laporan yang diubah tetap valid atau tidak valid.
+5. Jika laporan yang diubah dinilai tidak valid, administrator dapat menutup laporan tersebut.
 
-1. Apakah pelapor dapat mengubah laporan setelah dikirim.
-2. Apakah pelapor dapat membatalkan laporan.
-3. Apakah daftar ruangan perlu dikelompokkan berdasarkan gedung, lantai, atau jenis ruangan.
-4. Apa yang terjadi jika pelapor tidak setuju bahwa pekerjaan sudah selesai.
-5. Apakah notifikasi perlu memiliki daftar riwayat dan status sudah dibaca.
-6. Apakah administrator dapat mengedit kategori, lokasi, atau deskripsi laporan sebelum menugaskan teknisi.
-7. Apakah administrator dapat menggabungkan laporan duplikat.
-8. Apakah administrator dapat mengganti teknisi setelah laporan berjalan.
-9. Apakah teknisi dapat mengunggah foto hasil pekerjaan atau memperkirakan waktu penyelesaian.
-10. Apakah laporan ringkas perlu dapat diunduh.
-11. Apakah Manajer Fasilitas dapat memberi catatan tindak lanjut.
+### FR-034 Pembatalan Laporan oleh Pelapor
+1. Pelapor dapat membatalkan laporan.
+2. Sistem meminta alasan pembatalan saat pelapor membatalkan laporan.
+3. Sistem menyimpan alasan pembatalan pada riwayat laporan.
+
+### FR-035 Pengelompokan Daftar Ruangan
+1. Daftar ruangan ditampilkan berdasarkan gedung.
+2. Daftar ruangan di dalam gedung ditampilkan berdasarkan lantai.
+3. Pelapor dapat memilih ruangan dari kelompok gedung dan lantai yang tersedia.
+
+### FR-036 Penolakan Hasil Pekerjaan oleh Pelapor
+1. Pelapor dapat menolak hasil pekerjaan setelah teknisi menyatakan pekerjaan selesai.
+2. Sistem meminta alasan penolakan hasil pekerjaan.
+3. Administrator dapat membaca alasan penolakan hasil pekerjaan.
+4. Administrator dapat membuka ulang laporan sesuai ketentuan yang berlaku.
+
+### FR-037 Riwayat Notifikasi
+1. Pengguna dapat melihat riwayat notifikasi di aplikasi.
+2. Sistem menampilkan status notifikasi sudah dibaca atau belum dibaca.
+3. Pengguna dapat menandai notifikasi sebagai sudah dibaca.
+
+### FR-038 Edit Laporan oleh Administrator
+1. Administrator dapat mengedit kategori laporan sebelum menugaskan teknisi.
+2. Administrator dapat mengedit lokasi laporan sebelum menugaskan teknisi.
+3. Administrator dapat mengedit deskripsi laporan sebelum menugaskan teknisi.
+4. Sistem meminta alasan saat administrator mengedit data laporan.
+5. Sistem menyimpan alasan edit administrator pada riwayat laporan.
+
+### FR-039 Penggabungan Laporan Duplikat
+1. Administrator dapat menandai laporan sebagai duplikat dari laporan lain.
+2. Administrator dapat menggabungkan laporan duplikat.
+3. Sistem menyimpan hubungan antara laporan duplikat dan laporan utama.
+
+### FR-040 Penggantian Teknisi
+1. Administrator dapat mengajukan penggantian teknisi setelah laporan berjalan.
+2. Teknisi harus memberikan persetujuan sebelum penggantian teknisi dilakukan.
+3. Jika teknisi menyetujui, sistem memperbarui teknisi yang menangani laporan.
+4. Jika teknisi tidak menyetujui, penggantian teknisi tidak dilakukan.
+
+### FR-041 Foto Hasil Pekerjaan dan Estimasi Teknisi
+1. Teknisi dapat mengunggah foto hasil pekerjaan.
+2. Teknisi dapat mengisi perkiraan waktu penyelesaian.
+3. Sistem meminta penjelasan saat teknisi mengunggah foto hasil pekerjaan atau mengisi perkiraan waktu penyelesaian.
+4. Sistem menyimpan foto, perkiraan waktu, dan penjelasan pada laporan.
+
+### FR-042 Unduh Laporan Ringkas
+1. Manajer Fasilitas dapat mengunduh laporan ringkas.
+2. File unduhan berisi data laporan ringkas yang ditampilkan sistem.
+
+### FR-043 Catatan Tindak Lanjut Manajer Fasilitas
+1. Manajer Fasilitas dapat memberi catatan tindak lanjut pada laporan ringkas atau data laporan.
+2. Sistem meminta alasan saat Manajer Fasilitas memberi catatan tindak lanjut.
+3. Sistem menyimpan catatan tindak lanjut dan alasannya.
+
+## Requirement yang Sudah Diklarifikasi
+Bagian yang sebelumnya belum dispesifikasikan pada `03-requirement-specification.md` sudah dijadikan requirement formal berdasarkan klarifikasi pengguna pada 30 Juni 2026.
 
 ## Traceability Ringkas
 
@@ -185,6 +254,7 @@ Bagian berikut berasal dari `02-elicitation-questions.md` dan belum dijadikan re
 | REQ-DRAFT-019, REQ-DRAFT-031 | FR-022, FR-023 |
 | REQ-DRAFT-021 sampai REQ-DRAFT-024, REQ-DRAFT-032, REQ-DRAFT-033 | FR-024 sampai FR-029, US-012, US-013 |
 | REQ-DRAFT-026 | FR-030, US-014 |
+| Klarifikasi pengguna 30 Juni 2026 | FR-031 sampai FR-043, US-015 sampai US-020 |
 
 ## ASUMSI
 1. ASUMSI: Mahasiswa dan dosen memiliki hak pelaporan yang sama pada tahap awal.
@@ -198,7 +268,7 @@ Bagian berikut berasal dari `02-elicitation-questions.md` dan belum dijadikan re
 - Setiap user story terhubung ke requirement.
 - Acceptance criteria dapat diuji.
 - Setiap requirement memiliki ID unik.
-- Requirement yang belum cukup jelas tidak dipaksa menjadi requirement formal.
+- Requirement yang sebelumnya belum dispesifikasikan sudah diperbarui berdasarkan klarifikasi pengguna.
 
 ## Human Review
 Manusia perlu memeriksa apakah `FR`, `NFR`, `US`, dan acceptance criteria sudah mewakili kebutuhan stakeholder sebelum lanjut ke prioritas atau desain.
