@@ -23,10 +23,8 @@ Menggali kebutuhan stakeholder terkait pelaporan masalah fasilitas kampus, pemer
 
 ### Kebutuhan Pelaporan
 1. Saat membuat laporan, informasi apa saja yang perlu Anda lihat agar yakin laporan berhasil dikirim?
-2. Apakah judul masalah, deskripsi, kategori, lokasi ruangan, dan bukti opsional sudah cukup untuk membuat laporan?
-3. Apakah pelapor perlu dapat memilih tingkat urgensi masalah?
-4. Apakah pelapor perlu dapat mengubah laporan setelah dikirim?
-5. Apakah pelapor perlu dapat membatalkan laporan?
+2. Apakah pelapor perlu dapat mengubah laporan setelah dikirim?
+3. Apakah pelapor perlu dapat membatalkan laporan?
 
 ### Kategori dan Lokasi
 1. Kategori masalah fasilitas apa saja yang perlu tersedia selain proyektor, internet, AC, kursi, alat laboratorium, dan kebersihan ruangan?
@@ -38,37 +36,30 @@ Menggali kebutuhan stakeholder terkait pelaporan masalah fasilitas kampus, pemer
 2. Apakah pelapor perlu melihat nama teknisi yang menangani laporan?
 3. Setelah teknisi menyelesaikan pekerjaan, bagaimana bentuk konfirmasi yang paling jelas bagi pelapor?
 4. Jika pelapor tidak setuju bahwa pekerjaan sudah selesai, apa yang harus terjadi pada laporan?
-5. Apakah batas waktu 45 menit untuk konfirmasi sudah cukup?
 
 ### Notifikasi
-1. Perubahan status apa saja yang harus memunculkan notifikasi di aplikasi?
-2. Apakah notifikasi perlu ditampilkan sebagai daftar riwayat di aplikasi?
-3. Apakah pelapor perlu menandai notifikasi sebagai sudah dibaca?
+1. Apakah notifikasi perlu ditampilkan sebagai daftar riwayat di aplikasi?
+2. Apakah pelapor perlu menandai notifikasi sebagai sudah dibaca?
 
 ## Pertanyaan untuk STK-003 Administrator
 
 ### Pemeriksaan Laporan
 1. Kriteria apa yang membuat laporan dianggap valid?
-2. Kriteria apa yang membuat laporan dapat ditolak?
-3. Jika laporan ditolak, alasan penolakan apa yang perlu diberikan kepada pelapor?
-4. Apakah administrator perlu mengedit kategori, lokasi, atau deskripsi laporan sebelum menugaskan teknisi?
-5. Apakah administrator perlu menggabungkan laporan yang duplikat?
+2. Apakah administrator perlu mengedit kategori, lokasi, atau deskripsi laporan sebelum menugaskan teknisi?
+3. Apakah administrator perlu menggabungkan laporan yang duplikat?
 
 ### Penugasan Teknisi
 1. Informasi apa yang dibutuhkan administrator untuk memilih teknisi?
 2. Apakah administrator perlu melihat beban kerja teknisi sebelum menugaskan laporan?
-3. Apakah satu laporan dapat diberikan kepada lebih dari satu teknisi?
-4. Apakah administrator dapat mengganti teknisi setelah laporan berjalan?
+3. Apakah administrator dapat mengganti teknisi setelah laporan berjalan?
 
 ### Pembaruan Progress Teknisi
 1. Dalam kondisi apa administrator perlu memperbarui progress teknisi?
-2. Apakah pembaruan progress oleh administrator harus diberi catatan alasan?
-3. Apakah pelapor dan teknisi perlu menerima notifikasi saat administrator memperbarui progress?
+2. Apakah pelapor dan teknisi perlu menerima notifikasi saat administrator memperbarui progress?
 
 ### Penutupan Laporan
 1. Kapan administrator boleh menutup laporan tanpa konfirmasi pelapor?
-2. Jika pelapor tidak memberikan konfirmasi dalam 45 menit, apakah laporan otomatis dapat ditutup atau tetap harus ditutup manual oleh administrator?
-3. Data apa saja yang harus tersimpan saat laporan ditutup?
+2. Data apa saja yang harus tersimpan saat laporan ditutup?
 
 ## Pertanyaan untuk STK-004 Teknisi
 
@@ -78,11 +69,10 @@ Menggali kebutuhan stakeholder terkait pelaporan masalah fasilitas kampus, pemer
 3. Apakah teknisi dapat menolak atau mengembalikan tugas kepada administrator?
 
 ### Progress Pekerjaan
-1. Status progress apa saja yang perlu tersedia untuk teknisi?
-2. Apakah status seperti butuh bantuan, tertunda, atau menunggu suku cadang sudah cukup?
-3. Apakah teknisi perlu menambahkan catatan progress?
-4. Apakah teknisi perlu mengunggah foto hasil pekerjaan?
-5. Apakah teknisi perlu memperkirakan waktu penyelesaian?
+1. Apakah ada status progress lain selain butuh bantuan, tertunda, menunggu suku cadang, pekerjaan terjeda, dan masalah sudah ditangani?
+2. Apakah teknisi perlu menambahkan catatan progress?
+3. Apakah teknisi perlu mengunggah foto hasil pekerjaan?
+4. Apakah teknisi perlu memperkirakan waktu penyelesaian?
 
 ### Penyelesaian Pekerjaan
 1. Informasi apa yang harus diisi teknisi saat menyatakan pekerjaan selesai?
@@ -95,29 +85,39 @@ Menggali kebutuhan stakeholder terkait pelaporan masalah fasilitas kampus, pemer
 1. Total masalah yang sudah diselesaikan perlu ditampilkan untuk periode apa: harian, mingguan, bulanan, atau semua waktu?
 2. Chart kategori masalah yang paling sering muncul perlu ditampilkan dalam bentuk apa?
 3. Apakah dashboard perlu menampilkan jumlah laporan baru, sedang diproses, tertunda, dan ditutup?
-4. Apakah dashboard perlu difilter berdasarkan gedung, ruangan, kategori, atau periode waktu?
 
 ### Laporan Ringkas
-1. Informasi apa saja yang harus ada dalam laporan ringkas?
+1. Selain ruangan masalah dan kategori masalah, informasi apa lagi yang harus ada dalam laporan ringkas?
 2. Apakah laporan ringkas perlu dapat diunduh?
 3. Apakah laporan ringkas perlu menampilkan masalah yang paling lama belum selesai?
 4. Apakah laporan ringkas perlu menampilkan teknisi atau unit yang menangani laporan?
 
 ## Pertanyaan Non-Functional untuk Semua Stakeholder
 1. Siapa saja yang boleh mengakses sistem?
-2. Apakah semua pengguna harus login menggunakan akun kampus?
-3. Apakah ada batasan perangkat, misalnya harus nyaman digunakan di ponsel?
-4. Apakah ada kebutuhan keamanan khusus untuk data laporan?
-5. Berapa cepat sistem diharapkan menampilkan perubahan status?
-6. Berapa lama riwayat laporan perlu disimpan?
-7. Apakah sistem harus tetap dapat digunakan saat jaringan kampus lambat?
+2. Apakah ada batasan perangkat, misalnya harus nyaman digunakan di ponsel?
+3. Apakah ada kebutuhan keamanan khusus untuk data laporan?
+4. Berapa cepat sistem diharapkan menampilkan perubahan status?
+5. Berapa lama riwayat laporan perlu disimpan?
+6. Apakah sistem harus tetap dapat digunakan saat jaringan kampus lambat?
 
 ## Pertanyaan yang Belum Jelas
-1. Apakah daftar ruangan dibuat dan dikelola oleh administrator?
-2. Apakah kategori masalah dibuat tetap oleh sistem atau dapat ditambah administrator?
-3. Apakah bukti atau foto kerusakan hanya dapat diunggah saat membuat laporan, atau juga saat komentar lanjutan?
-4. Apakah penutupan laporan setelah 45 menit dilakukan otomatis atau manual oleh administrator?
-5. Apakah Manajer Fasilitas hanya melihat data atau dapat memberi catatan tindak lanjut?
+1. Apakah kategori masalah dibuat tetap oleh sistem atau dapat ditambah administrator atau Manajer Fasilitas?
+2. Apakah bukti atau foto kerusakan hanya dapat diunggah saat membuat laporan, atau juga saat komentar lanjutan?
+3. Apakah Manajer Fasilitas hanya melihat data dan memperbarui daftar ruangan, atau dapat memberi catatan tindak lanjut?
+
+## Pertanyaan yang Sudah Terjawab dari Elicitation Findings
+1. Pelapor harus login menggunakan akun kampus.
+2. Laporan berisi judul masalah, deskripsi, kategori, lokasi ruangan, tingkat urgensi, dan bukti atau foto opsional.
+3. Bukti atau foto kerusakan tidak wajib.
+4. Pelapor memilih lokasi dari daftar ruangan yang disediakan sistem.
+5. Daftar ruangan dapat diperbarui oleh Manajer Fasilitas jika ada ruangan baru.
+6. Administrator dapat menolak laporan jika judul tidak sesuai dengan deskripsi dan/atau kategori, laporan tanpa deskripsi, atau lokasi tidak diketahui maupun salah.
+7. Satu laporan tidak langsung diberikan kepada lebih dari satu teknisi, tetapi lebih dari satu teknisi dapat dikerahkan jika teknisi mengubah status menjadi butuh bantuan dan disetujui administrator.
+8. Pembaruan progress oleh administrator harus memiliki catatan alasan.
+9. Jika pelapor tidak memberi konfirmasi dalam 45 menit, laporan ditutup otomatis.
+10. Notifikasi aplikasi dipicu saat masalah sudah ditangani, membutuhkan suku cadang baru, teknisi butuh bantuan, dan pekerjaan terjeda.
+11. Dashboard dapat difilter atau diurutkan berdasarkan terbaru, terlama, ruangan, dan kategori.
+12. Laporan ringkas mengandung ruangan masalah dan kategori masalah.
 
 ## Quality Check
 - Pertanyaan disusun sesuai stakeholder.
